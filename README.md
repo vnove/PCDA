@@ -15,8 +15,12 @@ This is a Single Cell Analysis of collected RNA data from the brain of an 18 Day
 
 **Instructions to Run**
 
-1. The code is very straightforward, all you have to do is run through each kernel that contains code.
-2. For the first kernel in the **Data Retrieval and Exploratory Data Analysis**, if you already have a folder named Data, please change the output for the command "!mkdir -p data" to a folder name of your choice. 
+1. The code is very straightforward; all you have to do is run through each kernel that contains code.
+2. For the first kernel in the **Data Retrieval and Exploratory Data Analysis**, if you already have a folder named Data, please change the output for the command "!mkdir -p data" to a folder name of your choice. Adjust the following code to access your newly created data file:
+"!mkdir -p data
+!curl -L -o data/neurons_900_filtered_gene_bc_matrices.tar.gz https://cf.10xgenomics.com/samples/cell-exp/2.1.0/neurons_900/neurons_900_filtered_gene_bc_matrices.tar.gz
+!tar -xzf data/neurons_900_filtered_gene_bc_matrices.tar.gz -C data
+!mkdir -p write"
 
 **Project Goals**
 
